@@ -1,0 +1,72 @@
+.auth-container {
+	padding: 20vh 0;
+	.form-container {
+		box-sizing: content-box;
+		min-height: 40vh;
+		width: 40vw;
+		margin: auto;
+		padding: 2% 5%;
+		border-radius: 10px;
+		box-shadow: 1px 1px 20px dodgerblue;
+		@media only screen and (max-width: 1100px) {
+			width: 60vw;
+		}
+		@media only screen and (max-width: 1100px) {
+			width: 80vw;
+		}
+		@media only screen and (max-width: 550px) {
+			box-shadow: none;
+			border: 1px solid dodgerblue;
+		}
+		.title {
+			text-align: center;
+		}
+		.input-container {
+			margin: 3% 0%;
+			.form-control {
+				padding: 2% 2%;
+				width: 96%;
+				font-size: 15px;
+				border: 1px solid dodgerblue;
+				outline: none;
+				border-radius: 10px;
+				transition: all ease-in-out 0.3s;
+				&:focus {
+					outline: 1px solid dodgerblue;
+				}
+			}
+		}
+
+		.button {
+			.submit {
+				padding: 2% 5%;
+				border: 1px solid dodgerblue;
+				background-color: dodgerblue;
+				font-size: 15px;
+				cursor: pointer;
+				transition: all ease-in-out 0.3s;
+				&:hover {
+					color: white;
+					border-radius: 5px;
+				}
+			}
+		}
+
+		.other {
+			margin: 2% 0;
+			display: flex;
+			justify-content: space-between;
+			a {
+				text-decoration: none;
+				color: dodgerblue;
+				display: block;
+				@media only screen and (max-width: 550px) {
+					margin: 3% 0;
+				}
+			}
+			@media only screen and (max-width: 550px) {
+				flex-direction: column;
+			}
+		}
+	}
+}

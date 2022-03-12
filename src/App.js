@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Dashboard from "./pages/Dashboard";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import "./app.scss";
+import Invest from "./components/Invest";
+import Home from "./components/Home";
+import Withdraw from "./components/Withdraw";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<BrowserRouter>
+			<div className="App">
+				<ToastContainer position="top-center" />
+				<Routes>
+					<Route path="/" element={<Login />} />
+					<Route path="dashboard" element={<Dashboard />}>
+						<Route index element={<Home />} />
+						<Route path="invest" element={<Invest />} />
+						<Route path="withdraw" element={<Withdraw />} />
+					</Route>
+					<Route path="signup" element={<Signup />} />
+				</Routes>
+			</div>
+		</BrowserRouter>
+	);
 }
 
 export default App;

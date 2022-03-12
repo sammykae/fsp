@@ -1,0 +1,24 @@
+.form-container {
+	border-radius: 10px;
+	padding: 5% 2%;
+	box-shadow: 1px 1px 20px rgba(179, 179, 179, 0.589);
+	.form-control {
+		padding: 2%;
+		width: 95%;
+		outline: none;
+		border: 1px solid gray;
+		border-radius: 10px;
+	}
+
+	.btn {
+		margin: 3% 0;
+		input {
+			border: none;
+			padding: 2% 10%;
+			border-radius: 10px;
+			background-color: coral;
+			color: white;
+			cursor: pointer;
+		}
+	}
+}

@@ -1,0 +1,57 @@
+.dashboard-container {
+	width: 60vw;
+	margin: auto;
+	@media only screen and (max-width: 1000px) {
+		width: 70vw;
+	}
+	@media only screen and (max-width: 800px) {
+		width: 80vw;
+	}
+	@media only screen and (max-width: 600px) {
+		width: 100vw;
+	}
+	.appbar {
+		min-height: 8vh;
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid black;
+		padding: 0 15px;
+		box-sizing: content-box;
+		border-radius: 15px;
+		#active {
+			background-color: coral;
+		}
+
+		.link {
+			background-color: dodgerblue;
+			text-decoration: none;
+			color: white;
+			transition: all ease-in-out 0.3s;
+			width: 8vw;
+			padding: 1%;
+			text-align: center;
+			align-self: center;
+			@media only screen and (max-width: 1000px) {
+				width: 10vw;
+			}
+			@media only screen and (max-width: 800px) {
+				width: 15vw;
+			}
+			@media only screen and (max-width: 600px) {
+				width: 25vw;
+			}
+			@media only screen and (max-width: 300px) {
+				width: 30vw;
+			}
+
+			&:hover {
+				background-color: coral;
+			}
+		}
+	}
+
+	.main {
+		height: calc(100vh - 13vh);
+		padding: 2vh 2%;
+	}
+}
